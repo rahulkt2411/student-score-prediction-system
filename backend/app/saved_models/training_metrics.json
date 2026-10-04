@@ -1,0 +1,1049 @@
+{
+  "dataset_path": "C:\\Users\\nisha\\Downloads\\rahul.project\\backend\\app\\data\\loan_dataset.csv",
+  "target_column": "Loan_Status",
+  "test_size": 0.2,
+  "cv_folds": 5,
+  "training_duration_seconds": 8.95,
+  "timestamp": "2026-10-04 22:47:09",
+  "best_model_name": "Logistic Regression",
+  "best_metric_used": "Composite Score (40% F1 + 30% ROC-AUC + 30% CV Accuracy)",
+  "best_model_reason": "Logistic Regression selected automatically as the highest performer with F1 Score of 97.6%, ROC-AUC of 93.4%, and 5-Fold CV Accuracy of 97.4% (\u00b11.4%).",
+  "models_comparison": [
+    {
+      "name": "Logistic Regression",
+      "accuracy": 0.9593,
+      "precision": 0.9528,
+      "recall": 1.0,
+      "f1_score": 0.9758,
+      "roc_auc": 0.9338,
+      "cv_mean_accuracy": 0.9735,
+      "cv_std_accuracy": 0.0139,
+      "cv_mean_f1": 0.9843,
+      "cv_folds_detail": [
+        0.9798,
+        0.949,
+        0.9694,
+        0.9796,
+        0.9898
+      ],
+      "baseline_accuracy": 0.9593,
+      "baseline_f1": 0.9758,
+      "tuned": true,
+      "best_params": {
+        "C": 0.1,
+        "solver": "liblinear"
+      },
+      "composite_score": 0.9625,
+      "is_best_model": true
+    },
+    {
+      "name": "Support Vector Machine",
+      "accuracy": 0.9593,
+      "precision": 0.9528,
+      "recall": 1.0,
+      "f1_score": 0.9758,
+      "roc_auc": 0.8911,
+      "cv_mean_accuracy": 0.9735,
+      "cv_std_accuracy": 0.0139,
+      "cv_mean_f1": 0.9843,
+      "cv_folds_detail": [
+        0.9798,
+        0.949,
+        0.9694,
+        0.9796,
+        0.9898
+      ],
+      "baseline_accuracy": 0.9593,
+      "baseline_f1": 0.9758,
+      "tuned": true,
+      "best_params": {
+        "C": 0.5,
+        "kernel": "linear"
+      },
+      "composite_score": 0.9497,
+      "is_best_model": false
+    },
+    {
+      "name": "K-Nearest Neighbors",
+      "accuracy": 0.9593,
+      "precision": 0.9528,
+      "recall": 1.0,
+      "f1_score": 0.9758,
+      "roc_auc": 0.8594,
+      "cv_mean_accuracy": 0.9735,
+      "cv_std_accuracy": 0.0139,
+      "cv_mean_f1": 0.9843,
+      "cv_folds_detail": [
+        0.9798,
+        0.949,
+        0.9694,
+        0.9796,
+        0.9898
+      ],
+      "baseline_accuracy": 0.9593,
+      "baseline_f1": 0.9758,
+      "tuned": true,
+      "best_params": {
+        "n_neighbors": 5,
+        "weights": "uniform"
+      },
+      "composite_score": 0.9402,
+      "is_best_model": false
+    },
+    {
+      "name": "Decision Tree",
+      "accuracy": 0.9593,
+      "precision": 0.9528,
+      "recall": 1.0,
+      "f1_score": 0.9758,
+      "roc_auc": 0.8625,
+      "cv_mean_accuracy": 0.9572,
+      "cv_std_accuracy": 0.0136,
+      "cv_mean_f1": 0.9742,
+      "cv_folds_detail": [
+        0.9798,
+        0.9388,
+        0.9592,
+        0.9592,
+        0.949
+      ],
+      "baseline_accuracy": 0.9593,
+      "baseline_f1": 0.9758,
+      "tuned": true,
+      "best_params": {
+        "max_depth": 3,
+        "min_samples_leaf": 2,
+        "min_samples_split": 5
+      },
+      "composite_score": 0.9362,
+      "is_best_model": false
+    },
+    {
+      "name": "Random Forest",
+      "accuracy": 0.9593,
+      "precision": 0.9528,
+      "recall": 1.0,
+      "f1_score": 0.9758,
+      "roc_auc": 0.8308,
+      "cv_mean_accuracy": 0.9735,
+      "cv_std_accuracy": 0.0139,
+      "cv_mean_f1": 0.9843,
+      "cv_folds_detail": [
+        0.9798,
+        0.949,
+        0.9694,
+        0.9796,
+        0.9898
+      ],
+      "baseline_accuracy": 0.9593,
+      "baseline_f1": 0.9758,
+      "tuned": true,
+      "best_params": {
+        "max_depth": 4,
+        "min_samples_split": 2,
+        "n_estimators": 100
+      },
+      "composite_score": 0.9316,
+      "is_best_model": false
+    }
+  ],
+  "detailed_evaluations": {
+    "Logistic Regression": {
+      "accuracy": 0.9593,
+      "precision": 0.9528,
+      "recall": 1.0,
+      "f1_score": 0.9758,
+      "roc_auc": 0.9338,
+      "confusion_matrix": {
+        "matrix": [
+          [
+            17,
+            5
+          ],
+          [
+            0,
+            101
+          ]
+        ],
+        "true_negative": 17,
+        "false_positive": 5,
+        "false_negative": 0,
+        "true_positive": 101,
+        "tn_pct": 13.8,
+        "fp_pct": 4.1,
+        "fn_pct": 0.0,
+        "tp_pct": 82.1
+      },
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 0.7727272727272727,
+          "f1-score": 0.8717948717948718,
+          "support": 22.0
+        },
+        "1": {
+          "precision": 0.9528301886792453,
+          "recall": 1.0,
+          "f1-score": 0.9758454106280193,
+          "support": 101.0
+        },
+        "accuracy": 0.959349593495935,
+        "macro avg": {
+          "precision": 0.9764150943396226,
+          "recall": 0.8863636363636364,
+          "f1-score": 0.9238201412114455,
+          "support": 123.0
+        },
+        "weighted avg": {
+          "precision": 0.9612670655008436,
+          "recall": 0.959349593495935,
+          "f1-score": 0.9572347451456678,
+          "support": 123.0
+        }
+      },
+      "cv_stats": {
+        "folds": [
+          0.9798,
+          0.949,
+          0.9694,
+          0.9796,
+          0.9898
+        ],
+        "mean_accuracy": 0.9735,
+        "std_accuracy": 0.0139,
+        "f1_folds": [
+          0.9878,
+          0.9701,
+          0.9818,
+          0.9878,
+          0.9939
+        ],
+        "mean_f1": 0.9843,
+        "std_f1": 0.0081
+      },
+      "best_params": {
+        "C": 0.1,
+        "solver": "liblinear"
+      },
+      "baseline_accuracy": 0.9593,
+      "baseline_f1": 0.9758
+    },
+    "Decision Tree": {
+      "accuracy": 0.9593,
+      "precision": 0.9528,
+      "recall": 1.0,
+      "f1_score": 0.9758,
+      "roc_auc": 0.8625,
+      "confusion_matrix": {
+        "matrix": [
+          [
+            17,
+            5
+          ],
+          [
+            0,
+            101
+          ]
+        ],
+        "true_negative": 17,
+        "false_positive": 5,
+        "false_negative": 0,
+        "true_positive": 101,
+        "tn_pct": 13.8,
+        "fp_pct": 4.1,
+        "fn_pct": 0.0,
+        "tp_pct": 82.1
+      },
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 0.7727272727272727,
+          "f1-score": 0.8717948717948718,
+          "support": 22.0
+        },
+        "1": {
+          "precision": 0.9528301886792453,
+          "recall": 1.0,
+          "f1-score": 0.9758454106280193,
+          "support": 101.0
+        },
+        "accuracy": 0.959349593495935,
+        "macro avg": {
+          "precision": 0.9764150943396226,
+          "recall": 0.8863636363636364,
+          "f1-score": 0.9238201412114455,
+          "support": 123.0
+        },
+        "weighted avg": {
+          "precision": 0.9612670655008436,
+          "recall": 0.959349593495935,
+          "f1-score": 0.9572347451456678,
+          "support": 123.0
+        }
+      },
+      "cv_stats": {
+        "folds": [
+          0.9798,
+          0.9388,
+          0.9592,
+          0.9592,
+          0.949
+        ],
+        "mean_accuracy": 0.9572,
+        "std_accuracy": 0.0136,
+        "f1_folds": [
+          0.9878,
+          0.9639,
+          0.9756,
+          0.9753,
+          0.9686
+        ],
+        "mean_f1": 0.9742,
+        "std_f1": 0.0081
+      },
+      "best_params": {
+        "max_depth": 3,
+        "min_samples_leaf": 2,
+        "min_samples_split": 5
+      },
+      "baseline_accuracy": 0.9593,
+      "baseline_f1": 0.9758
+    },
+    "Random Forest": {
+      "accuracy": 0.9593,
+      "precision": 0.9528,
+      "recall": 1.0,
+      "f1_score": 0.9758,
+      "roc_auc": 0.8308,
+      "confusion_matrix": {
+        "matrix": [
+          [
+            17,
+            5
+          ],
+          [
+            0,
+            101
+          ]
+        ],
+        "true_negative": 17,
+        "false_positive": 5,
+        "false_negative": 0,
+        "true_positive": 101,
+        "tn_pct": 13.8,
+        "fp_pct": 4.1,
+        "fn_pct": 0.0,
+        "tp_pct": 82.1
+      },
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 0.7727272727272727,
+          "f1-score": 0.8717948717948718,
+          "support": 22.0
+        },
+        "1": {
+          "precision": 0.9528301886792453,
+          "recall": 1.0,
+          "f1-score": 0.9758454106280193,
+          "support": 101.0
+        },
+        "accuracy": 0.959349593495935,
+        "macro avg": {
+          "precision": 0.9764150943396226,
+          "recall": 0.8863636363636364,
+          "f1-score": 0.9238201412114455,
+          "support": 123.0
+        },
+        "weighted avg": {
+          "precision": 0.9612670655008436,
+          "recall": 0.959349593495935,
+          "f1-score": 0.9572347451456678,
+          "support": 123.0
+        }
+      },
+      "cv_stats": {
+        "folds": [
+          0.9798,
+          0.949,
+          0.9694,
+          0.9796,
+          0.9898
+        ],
+        "mean_accuracy": 0.9735,
+        "std_accuracy": 0.0139,
+        "f1_folds": [
+          0.9878,
+          0.9701,
+          0.9818,
+          0.9878,
+          0.9939
+        ],
+        "mean_f1": 0.9843,
+        "std_f1": 0.0081
+      },
+      "best_params": {
+        "max_depth": 4,
+        "min_samples_split": 2,
+        "n_estimators": 100
+      },
+      "baseline_accuracy": 0.9593,
+      "baseline_f1": 0.9758
+    },
+    "Support Vector Machine": {
+      "accuracy": 0.9593,
+      "precision": 0.9528,
+      "recall": 1.0,
+      "f1_score": 0.9758,
+      "roc_auc": 0.8911,
+      "confusion_matrix": {
+        "matrix": [
+          [
+            17,
+            5
+          ],
+          [
+            0,
+            101
+          ]
+        ],
+        "true_negative": 17,
+        "false_positive": 5,
+        "false_negative": 0,
+        "true_positive": 101,
+        "tn_pct": 13.8,
+        "fp_pct": 4.1,
+        "fn_pct": 0.0,
+        "tp_pct": 82.1
+      },
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 0.7727272727272727,
+          "f1-score": 0.8717948717948718,
+          "support": 22.0
+        },
+        "1": {
+          "precision": 0.9528301886792453,
+          "recall": 1.0,
+          "f1-score": 0.9758454106280193,
+          "support": 101.0
+        },
+        "accuracy": 0.959349593495935,
+        "macro avg": {
+          "precision": 0.9764150943396226,
+          "recall": 0.8863636363636364,
+          "f1-score": 0.9238201412114455,
+          "support": 123.0
+        },
+        "weighted avg": {
+          "precision": 0.9612670655008436,
+          "recall": 0.959349593495935,
+          "f1-score": 0.9572347451456678,
+          "support": 123.0
+        }
+      },
+      "cv_stats": {
+        "folds": [
+          0.9798,
+          0.949,
+          0.9694,
+          0.9796,
+          0.9898
+        ],
+        "mean_accuracy": 0.9735,
+        "std_accuracy": 0.0139,
+        "f1_folds": [
+          0.9878,
+          0.9701,
+          0.9818,
+          0.9878,
+          0.9939
+        ],
+        "mean_f1": 0.9843,
+        "std_f1": 0.0081
+      },
+      "best_params": {
+        "C": 0.5,
+        "kernel": "linear"
+      },
+      "baseline_accuracy": 0.9593,
+      "baseline_f1": 0.9758
+    },
+    "K-Nearest Neighbors": {
+      "accuracy": 0.9593,
+      "precision": 0.9528,
+      "recall": 1.0,
+      "f1_score": 0.9758,
+      "roc_auc": 0.8594,
+      "confusion_matrix": {
+        "matrix": [
+          [
+            17,
+            5
+          ],
+          [
+            0,
+            101
+          ]
+        ],
+        "true_negative": 17,
+        "false_positive": 5,
+        "false_negative": 0,
+        "true_positive": 101,
+        "tn_pct": 13.8,
+        "fp_pct": 4.1,
+        "fn_pct": 0.0,
+        "tp_pct": 82.1
+      },
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 0.7727272727272727,
+          "f1-score": 0.8717948717948718,
+          "support": 22.0
+        },
+        "1": {
+          "precision": 0.9528301886792453,
+          "recall": 1.0,
+          "f1-score": 0.9758454106280193,
+          "support": 101.0
+        },
+        "accuracy": 0.959349593495935,
+        "macro avg": {
+          "precision": 0.9764150943396226,
+          "recall": 0.8863636363636364,
+          "f1-score": 0.9238201412114455,
+          "support": 123.0
+        },
+        "weighted avg": {
+          "precision": 0.9612670655008436,
+          "recall": 0.959349593495935,
+          "f1-score": 0.9572347451456678,
+          "support": 123.0
+        }
+      },
+      "cv_stats": {
+        "folds": [
+          0.9798,
+          0.949,
+          0.9694,
+          0.9796,
+          0.9898
+        ],
+        "mean_accuracy": 0.9735,
+        "std_accuracy": 0.0139,
+        "f1_folds": [
+          0.9878,
+          0.9701,
+          0.9818,
+          0.9878,
+          0.9939
+        ],
+        "mean_f1": 0.9843,
+        "std_f1": 0.0081
+      },
+      "best_params": {
+        "n_neighbors": 5,
+        "weights": "uniform"
+      },
+      "baseline_accuracy": 0.9593,
+      "baseline_f1": 0.9758
+    }
+  },
+  "feature_importances": {
+    "Logistic Regression": [
+      {
+        "rank": 1,
+        "feature_key": "Credit_History",
+        "feature_name": "Credit History",
+        "importance_pct": 35.86,
+        "description": "Indicates whether applicant past credit obligations were fulfilled without default."
+      },
+      {
+        "rank": 2,
+        "feature_key": "Married",
+        "feature_name": "Marital Status",
+        "importance_pct": 10.06,
+        "description": "Household stability and dual income potential vs combined living expenditures."
+      },
+      {
+        "rank": 3,
+        "feature_key": "Property_Area",
+        "feature_name": "Property Location Area",
+        "importance_pct": 10.06,
+        "description": "Locality asset valuation tier (Semiurban/Urban/Rural) affecting liquidation collateral stability."
+      },
+      {
+        "rank": 4,
+        "feature_key": "Education",
+        "feature_name": "Applicant Education Level",
+        "importance_pct": 10.06,
+        "description": "Predictor of long-term earning potential, career trajectory, and financial literacy."
+      },
+      {
+        "rank": 5,
+        "feature_key": "Gender",
+        "feature_name": "Applicant Gender",
+        "importance_pct": 10.06,
+        "description": "Demographic baseline feature evaluated in accordance with non-discriminatory compliance."
+      },
+      {
+        "rank": 6,
+        "feature_key": "Dependents",
+        "feature_name": "Number of Dependents",
+        "importance_pct": 10.06,
+        "description": "Fixed household liabilities reducing disposable monthly income available for repayment."
+      },
+      {
+        "rank": 7,
+        "feature_key": "Self_Employed",
+        "feature_name": "Self-Employment Status",
+        "importance_pct": 10.06,
+        "description": "Income volatility indicator compared to regular salaried employment."
+      },
+      {
+        "rank": 8,
+        "feature_key": "CoapplicantIncome",
+        "feature_name": "Coapplicant Income",
+        "importance_pct": 1.5,
+        "description": "Secondary financial backing that augments household debt-to-income servicing capacity."
+      },
+      {
+        "rank": 9,
+        "feature_key": "ApplicantIncome",
+        "feature_name": "Applicant Monthly Income",
+        "importance_pct": 1.22,
+        "description": "Primary revenue stream determining capacity to service regular monthly debt obligations."
+      },
+      {
+        "rank": 10,
+        "feature_key": "Loan_Amount_Term",
+        "feature_name": "Loan Repayment Term",
+        "importance_pct": 1.05,
+        "description": "Duration of debt amortization; affects monthly EMI installments and lifetime interest."
+      },
+      {
+        "rank": 11,
+        "feature_key": "LoanAmount",
+        "feature_name": "Loan Amount",
+        "importance_pct": 0.01,
+        "description": "Principal sum requested; directly scales monthly repayment burden and default risk exposure."
+      }
+    ],
+    "Decision Tree": [
+      {
+        "rank": 1,
+        "feature_key": "Credit_History",
+        "feature_name": "Credit History",
+        "importance_pct": 99.04,
+        "description": "Indicates whether applicant past credit obligations were fulfilled without default."
+      },
+      {
+        "rank": 2,
+        "feature_key": "ApplicantIncome",
+        "feature_name": "Applicant Monthly Income",
+        "importance_pct": 0.87,
+        "description": "Primary revenue stream determining capacity to service regular monthly debt obligations."
+      },
+      {
+        "rank": 3,
+        "feature_key": "Gender",
+        "feature_name": "Applicant Gender",
+        "importance_pct": 0.09,
+        "description": "Demographic baseline feature evaluated in accordance with non-discriminatory compliance."
+      },
+      {
+        "rank": 4,
+        "feature_key": "CoapplicantIncome",
+        "feature_name": "Coapplicant Income",
+        "importance_pct": 0.0,
+        "description": "Secondary financial backing that augments household debt-to-income servicing capacity."
+      },
+      {
+        "rank": 5,
+        "feature_key": "LoanAmount",
+        "feature_name": "Loan Amount",
+        "importance_pct": 0.0,
+        "description": "Principal sum requested; directly scales monthly repayment burden and default risk exposure."
+      },
+      {
+        "rank": 6,
+        "feature_key": "Loan_Amount_Term",
+        "feature_name": "Loan Repayment Term",
+        "importance_pct": 0.0,
+        "description": "Duration of debt amortization; affects monthly EMI installments and lifetime interest."
+      },
+      {
+        "rank": 7,
+        "feature_key": "Married",
+        "feature_name": "Marital Status",
+        "importance_pct": 0.0,
+        "description": "Household stability and dual income potential vs combined living expenditures."
+      },
+      {
+        "rank": 8,
+        "feature_key": "Dependents",
+        "feature_name": "Number of Dependents",
+        "importance_pct": 0.0,
+        "description": "Fixed household liabilities reducing disposable monthly income available for repayment."
+      },
+      {
+        "rank": 9,
+        "feature_key": "Education",
+        "feature_name": "Applicant Education Level",
+        "importance_pct": 0.0,
+        "description": "Predictor of long-term earning potential, career trajectory, and financial literacy."
+      },
+      {
+        "rank": 10,
+        "feature_key": "Self_Employed",
+        "feature_name": "Self-Employment Status",
+        "importance_pct": 0.0,
+        "description": "Income volatility indicator compared to regular salaried employment."
+      },
+      {
+        "rank": 11,
+        "feature_key": "Property_Area",
+        "feature_name": "Property Location Area",
+        "importance_pct": 0.0,
+        "description": "Locality asset valuation tier (Semiurban/Urban/Rural) affecting liquidation collateral stability."
+      }
+    ],
+    "Random Forest": [
+      {
+        "rank": 1,
+        "feature_key": "Credit_History",
+        "feature_name": "Credit History",
+        "importance_pct": 69.91,
+        "description": "Indicates whether applicant past credit obligations were fulfilled without default."
+      },
+      {
+        "rank": 2,
+        "feature_key": "ApplicantIncome",
+        "feature_name": "Applicant Monthly Income",
+        "importance_pct": 6.04,
+        "description": "Primary revenue stream determining capacity to service regular monthly debt obligations."
+      },
+      {
+        "rank": 3,
+        "feature_key": "LoanAmount",
+        "feature_name": "Loan Amount",
+        "importance_pct": 5.82,
+        "description": "Principal sum requested; directly scales monthly repayment burden and default risk exposure."
+      },
+      {
+        "rank": 4,
+        "feature_key": "CoapplicantIncome",
+        "feature_name": "Coapplicant Income",
+        "importance_pct": 4.21,
+        "description": "Secondary financial backing that augments household debt-to-income servicing capacity."
+      },
+      {
+        "rank": 5,
+        "feature_key": "Dependents",
+        "feature_name": "Number of Dependents",
+        "importance_pct": 2.9,
+        "description": "Fixed household liabilities reducing disposable monthly income available for repayment."
+      },
+      {
+        "rank": 6,
+        "feature_key": "Property_Area",
+        "feature_name": "Property Location Area",
+        "importance_pct": 2.63,
+        "description": "Locality asset valuation tier (Semiurban/Urban/Rural) affecting liquidation collateral stability."
+      },
+      {
+        "rank": 7,
+        "feature_key": "Self_Employed",
+        "feature_name": "Self-Employment Status",
+        "importance_pct": 2.02,
+        "description": "Income volatility indicator compared to regular salaried employment."
+      },
+      {
+        "rank": 8,
+        "feature_key": "Gender",
+        "feature_name": "Applicant Gender",
+        "importance_pct": 1.86,
+        "description": "Demographic baseline feature evaluated in accordance with non-discriminatory compliance."
+      },
+      {
+        "rank": 9,
+        "feature_key": "Education",
+        "feature_name": "Applicant Education Level",
+        "importance_pct": 1.65,
+        "description": "Predictor of long-term earning potential, career trajectory, and financial literacy."
+      },
+      {
+        "rank": 10,
+        "feature_key": "Loan_Amount_Term",
+        "feature_name": "Loan Repayment Term",
+        "importance_pct": 1.61,
+        "description": "Duration of debt amortization; affects monthly EMI installments and lifetime interest."
+      },
+      {
+        "rank": 11,
+        "feature_key": "Married",
+        "feature_name": "Marital Status",
+        "importance_pct": 1.33,
+        "description": "Household stability and dual income potential vs combined living expenditures."
+      }
+    ],
+    "Support Vector Machine": [
+      {
+        "rank": 1,
+        "feature_key": "Credit_History",
+        "feature_name": "Credit History",
+        "importance_pct": 99.79,
+        "description": "Indicates whether applicant past credit obligations were fulfilled without default."
+      },
+      {
+        "rank": 2,
+        "feature_key": "Dependents",
+        "feature_name": "Number of Dependents",
+        "importance_pct": 0.08,
+        "description": "Fixed household liabilities reducing disposable monthly income available for repayment."
+      },
+      {
+        "rank": 3,
+        "feature_key": "LoanAmount",
+        "feature_name": "Loan Amount",
+        "importance_pct": 0.03,
+        "description": "Principal sum requested; directly scales monthly repayment burden and default risk exposure."
+      },
+      {
+        "rank": 4,
+        "feature_key": "CoapplicantIncome",
+        "feature_name": "Coapplicant Income",
+        "importance_pct": 0.02,
+        "description": "Secondary financial backing that augments household debt-to-income servicing capacity."
+      },
+      {
+        "rank": 5,
+        "feature_key": "Property_Area",
+        "feature_name": "Property Location Area",
+        "importance_pct": 0.02,
+        "description": "Locality asset valuation tier (Semiurban/Urban/Rural) affecting liquidation collateral stability."
+      },
+      {
+        "rank": 6,
+        "feature_key": "Loan_Amount_Term",
+        "feature_name": "Loan Repayment Term",
+        "importance_pct": 0.01,
+        "description": "Duration of debt amortization; affects monthly EMI installments and lifetime interest."
+      },
+      {
+        "rank": 7,
+        "feature_key": "Married",
+        "feature_name": "Marital Status",
+        "importance_pct": 0.01,
+        "description": "Household stability and dual income potential vs combined living expenditures."
+      },
+      {
+        "rank": 8,
+        "feature_key": "ApplicantIncome",
+        "feature_name": "Applicant Monthly Income",
+        "importance_pct": 0.01,
+        "description": "Primary revenue stream determining capacity to service regular monthly debt obligations."
+      },
+      {
+        "rank": 9,
+        "feature_key": "Gender",
+        "feature_name": "Applicant Gender",
+        "importance_pct": 0.01,
+        "description": "Demographic baseline feature evaluated in accordance with non-discriminatory compliance."
+      },
+      {
+        "rank": 10,
+        "feature_key": "Self_Employed",
+        "feature_name": "Self-Employment Status",
+        "importance_pct": 0.01,
+        "description": "Income volatility indicator compared to regular salaried employment."
+      },
+      {
+        "rank": 11,
+        "feature_key": "Education",
+        "feature_name": "Applicant Education Level",
+        "importance_pct": 0.0,
+        "description": "Predictor of long-term earning potential, career trajectory, and financial literacy."
+      }
+    ],
+    "K-Nearest Neighbors": [
+      {
+        "rank": 1,
+        "feature_key": "Dependents",
+        "feature_name": "Number of Dependents",
+        "importance_pct": 20.0,
+        "description": "Fixed household liabilities reducing disposable monthly income available for repayment."
+      },
+      {
+        "rank": 2,
+        "feature_key": "Property_Area",
+        "feature_name": "Property Location Area",
+        "importance_pct": 15.0,
+        "description": "Locality asset valuation tier (Semiurban/Urban/Rural) affecting liquidation collateral stability."
+      },
+      {
+        "rank": 3,
+        "feature_key": "Gender",
+        "feature_name": "Applicant Gender",
+        "importance_pct": 10.0,
+        "description": "Demographic baseline feature evaluated in accordance with non-discriminatory compliance."
+      },
+      {
+        "rank": 4,
+        "feature_key": "Married",
+        "feature_name": "Marital Status",
+        "importance_pct": 10.0,
+        "description": "Household stability and dual income potential vs combined living expenditures."
+      },
+      {
+        "rank": 5,
+        "feature_key": "Education",
+        "feature_name": "Applicant Education Level",
+        "importance_pct": 10.0,
+        "description": "Predictor of long-term earning potential, career trajectory, and financial literacy."
+      },
+      {
+        "rank": 6,
+        "feature_key": "Self_Employed",
+        "feature_name": "Self-Employment Status",
+        "importance_pct": 10.0,
+        "description": "Income volatility indicator compared to regular salaried employment."
+      },
+      {
+        "rank": 7,
+        "feature_key": "ApplicantIncome",
+        "feature_name": "Applicant Monthly Income",
+        "importance_pct": 5.0,
+        "description": "Primary revenue stream determining capacity to service regular monthly debt obligations."
+      },
+      {
+        "rank": 8,
+        "feature_key": "CoapplicantIncome",
+        "feature_name": "Coapplicant Income",
+        "importance_pct": 5.0,
+        "description": "Secondary financial backing that augments household debt-to-income servicing capacity."
+      },
+      {
+        "rank": 9,
+        "feature_key": "LoanAmount",
+        "feature_name": "Loan Amount",
+        "importance_pct": 5.0,
+        "description": "Principal sum requested; directly scales monthly repayment burden and default risk exposure."
+      },
+      {
+        "rank": 10,
+        "feature_key": "Loan_Amount_Term",
+        "feature_name": "Loan Repayment Term",
+        "importance_pct": 5.0,
+        "description": "Duration of debt amortization; affects monthly EMI installments and lifetime interest."
+      },
+      {
+        "rank": 11,
+        "feature_key": "Credit_History",
+        "feature_name": "Credit History",
+        "importance_pct": 5.0,
+        "description": "Indicates whether applicant past credit obligations were fulfilled without default."
+      }
+    ]
+  },
+  "preprocessor_summary": {
+    "total_rows": 614,
+    "total_columns": 13,
+    "columns": [
+      "Loan_ID",
+      "Gender",
+      "Married",
+      "Dependents",
+      "Education",
+      "Self_Employed",
+      "ApplicantIncome",
+      "CoapplicantIncome",
+      "LoanAmount",
+      "Loan_Amount_Term",
+      "Credit_History",
+      "Property_Area",
+      "Loan_Status"
+    ],
+    "missing_values": {
+      "Loan_ID": 0,
+      "Gender": 12,
+      "Married": 5,
+      "Dependents": 14,
+      "Education": 0,
+      "Self_Employed": 43,
+      "ApplicantIncome": 0,
+      "CoapplicantIncome": 0,
+      "LoanAmount": 18,
+      "Loan_Amount_Term": 12,
+      "Credit_History": 45,
+      "Property_Area": 0,
+      "Loan_Status": 0
+    },
+    "missing_percentages": {
+      "Loan_ID": 0.0,
+      "Gender": 1.95,
+      "Married": 0.81,
+      "Dependents": 2.28,
+      "Education": 0.0,
+      "Self_Employed": 7.0,
+      "ApplicantIncome": 0.0,
+      "CoapplicantIncome": 0.0,
+      "LoanAmount": 2.93,
+      "Loan_Amount_Term": 1.95,
+      "Credit_History": 7.33,
+      "Property_Area": 0.0,
+      "Loan_Status": 0.0
+    },
+    "duplicate_rows": 0,
+    "target_column": "Loan_Status",
+    "target_distribution": {
+      "Y": {
+        "count": 506,
+        "percentage": 82.41
+      },
+      "N": {
+        "count": 108,
+        "percentage": 17.59
+      }
+    },
+    "numerical_columns": [
+      "ApplicantIncome",
+      "CoapplicantIncome",
+      "LoanAmount",
+      "Loan_Amount_Term",
+      "Credit_History"
+    ],
+    "categorical_columns": [
+      "Gender",
+      "Married",
+      "Dependents",
+      "Education",
+      "Self_Employed",
+      "Property_Area"
+    ]
+  },
+  "transformed_features": [
+    "ApplicantIncome",
+    "CoapplicantIncome",
+    "LoanAmount",
+    "Loan_Amount_Term",
+    "Credit_History",
+    "Gender_Female",
+    "Gender_Male",
+    "Married_No",
+    "Married_Yes",
+    "Dependents_0",
+    "Dependents_1",
+    "Dependents_2",
+    "Dependents_3+",
+    "Education_Graduate",
+    "Education_Not Graduate",
+    "Self_Employed_No",
+    "Self_Employed_Yes",
+    "Property_Area_Rural",
+    "Property_Area_Semiurban",
+    "Property_Area_Urban"
+  ]
+}
